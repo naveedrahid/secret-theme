@@ -9,15 +9,15 @@
  * @package secret_Theme
  */
 
- $saved_footer = get_option('footer_settings');
+//  $saved_footer = get_option('footer_settings');
 
- if ($saved_footer['footer_style'] == 'footer1') {
-	 include get_template_directory() . '/footer/footer1.php';
- }elseif($saved_footer['footer_style'] == 'footer2'){
-	 include get_template_directory() . '/footer/footer2.php';
- }elseif($saved_footer['footer_style'] == 'footer3'){
-	 include get_template_directory() . '/footer/footer3.php';
- }elseif($saved_footer['footer_style'] == 'null'){
+//  if ($saved_footer['footer_style'] == 'footer1') {
+// 	 include get_template_directory() . '/footer/footer1.php';
+//  }elseif($saved_footer['footer_style'] == 'footer2'){
+// 	 include get_template_directory() . '/footer/footer2.php';
+//  }elseif($saved_footer['footer_style'] == 'footer3'){
+// 	 include get_template_directory() . '/footer/footer3.php';
+//  }elseif($saved_footer['footer_style'] == 'null'){
 ?>
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
@@ -37,7 +37,7 @@
 </div><!-- #page -->
 
 <?php 
- }
+//  }
 wp_footer();
 ?>
 
