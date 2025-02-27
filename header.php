@@ -26,22 +26,22 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'secret-theme' ); ?></a>
 
 	<?php 
-		// $saved_header = get_option('header_settings');
+		$saved_header = get_option('header_settings');
 		// var_dump($saved_header);
 
-		// if ($saved_header['header_style'] == 'header1') {
-		// 	include get_template_directory() . '/header/header1.php';
-		// }elseif($saved_header['header_style'] == 'header2'){
-		// 	include get_template_directory() . '/header/header2.php';
-		// }elseif($saved_header['header_style'] == 'header3'){
-		// 	include get_template_directory() . '/header/header3.php';
-		// }else{
+		if ($saved_header['header_style'] == 'header1') {
+			include get_template_directory() . '/header/header1.php';
+		}elseif($saved_header['header_style'] == 'header2'){
+			include get_template_directory() . '/header/header2.php';
+		}elseif($saved_header['header_style'] == 'header3'){
+			include get_template_directory() . '/header/header3.php';
+		}else{
 			?>
 			<?php
-				// $colors_settings = get_option('colors_settings');
-				// $primary_color = isset($colors_settings['color_schema']) ? $colors_settings['color_schema'] : '#ffffff';
+				$colors_settings = get_option('colors_settings');
+				$primary_color = isset($colors_settings['color_schema']) ? $colors_settings['color_schema'] : '#ffffff';
 			?>
-			<!-- <h1 style="background:<?//php echo esc_attr($primary_color); ?>">dsdad</h1> -->
+			<h1 style="background:<?php echo esc_attr($primary_color); ?>">dsdad</h1>
 				<header id="masthead" class="site-header">
 					<div class="site-branding">
 						<?php
@@ -75,6 +75,6 @@
 					</nav><!-- #site-navigation -->
 				</header>
 			<?php
-		// }
+		}
 	?>
 
